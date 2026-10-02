@@ -1,0 +1,2133 @@
+/* =========================================================
+   PALETA DE COLORES Y VARIABLES
+   ---------------------------------------------------------
+   :root permite crear variables que podemos reutilizar
+   en todo el documento CSS.
+
+   Por ejemplo:
+   var(--rojo) utiliza el color guardado en --rojo.
+
+   Esto facilita cambiar los colores de toda la página
+   desde un solo lugar.
+========================================================= */
+
+:root {
+
+    /* Color blanco utilizado principalmente para textos */
+    --blanco: #ffffff;
+
+    /* Color negro principal del sitio */
+    --negro: #120101;
+
+    /* Negro ligeramente más claro para crear profundidad */
+    --negro-suave: #1b0505;
+
+    /* Rojo principal de la página */
+    --rojo: #fa0606;
+
+    /* Rojo oscuro / vino utilizado en fondos */
+    --rojo-oscuro: #5b0505;
+
+    /* Morado utilizado como color de apoyo */
+    --azul: #4107c9;
+
+    /* Azul petróleo utilizado como color secundario */
+    --azul-petroleo: #2d6e85;
+
+    /* Verde disponible para elementos que lo necesiten */
+    --verde: #05a81b;
+
+    /* Rojo claro utilizado en títulos y detalles */
+    --salmon: #ed5151;
+
+    /* Gris para textos secundarios */
+    --gris: #9c9a9a;
+
+    /* Gris oscuro para crear contraste */
+    --gris-oscuro: #302020;
+
+    /* Fuente principal de toda la página */
+    --fuenteprincipal: "Work Sans", sans-serif;
+
+    /* Tamaño de fuente que podemos reutilizar */
+    --tamañofuente: 3.3rem;
+
+    /* Sombra general utilizada en diferentes elementos */
+    --sombra:
+        0 15px 35px rgba(0, 0, 0, 0.65);
+
+    /* Transición general para animaciones suaves */
+    --transicion:
+        all 0.35s ease;
+}
+
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ---------------------------------------------------------
+   Esta parte establece las reglas básicas de toda la página.
+
+   html controla el tamaño base de las unidades rem.
+   body define la fuente, color, fondo y separación general.
+========================================================= */
+
+html {
+
+    /* Hace que 1rem equivalga aproximadamente a 10px */
+    font-size: 62.5%;
+
+    /* Hace que el tamaño de los elementos sea más fácil
+       de calcular */
+    box-sizing: border-box;
+
+    /* Permite desplazamiento suave al utilizar enlaces */
+    scroll-behavior: smooth;
+}
+
+
+/* Hace que padding y border formen parte del tamaño
+   total de los elementos */
+*,
+*::before,
+*::after {
+
+    box-sizing: inherit;
+}
+
+
+/* Configuración principal del documento */
+
+body {
+
+    /* Elimina el margen que el navegador agrega por defecto */
+    margin: 0;
+
+    /* Tamaño general de la letra */
+    font-size: 1.6rem;
+
+    /* Fuente utilizada en todo el sitio */
+    font-family: var(--fuenteprincipal);
+
+    /* Grosor normal de la letra */
+    font-weight: 400;
+
+    /* Color general del texto */
+    color: var(--blanco);
+
+    /* Fondo principal oscuro */
+    background-color: var(--negro);
+
+    /* Espacio entre líneas */
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   IMÁGENES
+   ---------------------------------------------------------
+   Esta regla evita que las imágenes sean más grandes que
+   el elemento que las contiene.
+========================================================= */
+
+img {
+
+    max-width: 100%;
+
+    /* Evita espacios extra debajo de las imágenes */
+    display: block;
+}
+/* =========================================================
+   TÍTULOS
+   ---------------------------------------------------------
+   Se establecen reglas generales para h1, h2 y h3.
+========================================================= */
+
+h1,
+h2,
+h3 {
+
+    /* Elimina margen superior automático */
+    margin-top: 0;
+
+    /* Centra los títulos */
+    text-align: center;
+
+    /* Mejora el espacio entre líneas */
+    line-height: 1.2;
+}
+
+
+h2 {
+
+    /* Tamaño de los títulos secundarios */
+    font-size: 3rem;
+
+    /* Separación inferior */
+    margin-bottom: 2rem;
+
+    /* Color blanco */
+    color: var(--blanco);
+}
+
+
+h3 {
+
+    /* Tamaño de títulos pequeños */
+    font-size: 2rem;
+
+    /* Color rojo claro */
+    color: var(--salmon);
+}
+
+
+/* =========================================================
+   PÁRRAFOS
+========================================================= */
+
+p {
+
+    /* Separación inferior de los párrafos */
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================================
+   ENLACES
+   ---------------------------------------------------------
+   transition permite que los cambios de color, tamaño,
+   posición, etc. ocurran suavemente.
+========================================================= */
+
+a {
+
+    transition: var(--transicion);
+}
+
+
+/* =========================================================
+   CONTENEDORES
+   ---------------------------------------------------------
+   .contenedor limita el ancho del contenido y lo centra.
+========================================================= */
+
+.contenedor {
+
+    /* El contenido nunca será mayor a 1200px aproximadamente */
+    width: min(120rem, 92%);
+
+    /* Centra horizontalmente el contenido */
+    margin: 0 auto;
+}
+
+
+/* Espaciado general de las secciones */
+
+.seccion {
+
+    padding: 6rem 2rem;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ---------------------------------------------------------
+   header corresponde a la parte superior donde aparece
+   el nombre de Axel y el título del sitio.
+========================================================= */
+
+header {
+
+    /* Espacio interno */
+    padding: 3rem 2rem;
+
+    /* Fondo con degradado oscuro */
+    background:
+        linear-gradient(
+            135deg,
+            #120101 0%,
+            #300303 55%,
+            #5b0505 100%
+        );
+
+    /* Texto blanco */
+    color: var(--blanco);
+
+    /* Línea roja debajo del encabezado */
+    border-bottom:
+        3px solid var(--rojo);
+}
+
+
+/* Nombre principal */
+
+.titulo {
+
+    /* Elimina margen */
+    margin: 0;
+
+    /* Texto blanco */
+    color: var(--blanco);
+
+    /* Tamaño */
+    font-size: 4rem;
+
+    /* Grosor */
+    font-weight: 700;
+
+    /* Separación entre letras */
+    letter-spacing: 0.2rem;
+
+    /* Brillo rojo muy ligero */
+    text-shadow:
+        0 0 15px rgba(250, 6, 6, 0.25);
+
+    /* Animación al cargar */
+    animation: aparecer 0.8s ease;
+}
+
+
+/* Subtítulo debajo del nombre */
+
+.titulo span {
+
+    /* Hace que aparezca en otra línea */
+    display: block;
+
+    /* Separación superior */
+    margin-top: 0.8rem;
+
+    /* Tamaño */
+    font-size: 1.7rem;
+
+    /* Grosor normal */
+    font-weight: 400;
+
+    /* Espaciado */
+    letter-spacing: 0.4rem;
+
+    /* Color rojo claro */
+    color: var(--salmon);
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+   ---------------------------------------------------------
+   .nav-bg es el fondo de la barra de navegación.
+
+   .navegacion-principal organiza los enlaces del menú.
+========================================================= */
+
+.nav-bg {
+
+    /* Fondo vino */
+    background-color: var(--rojo-oscuro);
+
+    /* Mantiene el menú visible al desplazarse */
+    position: sticky;
+
+    top: 0;
+
+    /* Hace que aparezca sobre otros elementos */
+    z-index: 1000;
+
+    /* Sombra */
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Organización del menú */
+
+.navegacion-principal {
+
+    /* Utiliza Flexbox */
+    display: flex;
+
+    /* Inicialmente coloca los elementos verticalmente */
+    flex-direction: column;
+
+    /* Centra los elementos */
+    align-items: center;
+
+    gap: 0;
+}
+
+
+/* Enlaces del menú */
+
+.navegacion-principal a {
+
+    /* Cada enlace ocupa todo el ancho */
+    width: 100%;
+
+    /* Espacio interno */
+    padding: 1.5rem 2rem;
+
+    /* Color */
+    color: var(--blanco);
+
+    /* Quita el subrayado */
+    text-decoration: none;
+
+    /* Centra el texto */
+    text-align: center;
+
+    /* Texto seminegrita */
+    font-weight: 600;
+
+    /* Permite colocar la línea inferior */
+    position: relative;
+}
+
+
+/* Línea roja que aparece al pasar el mouse */
+
+.navegacion-principal a::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 50%;
+
+    width: 0;
+
+    height: 3px;
+
+    background-color: var(--rojo);
+
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease;
+}
+
+
+/* Efecto hover del menú */
+
+.navegacion-principal a:hover {
+
+    background-color: var(--negro);
+
+    color: var(--blanco);
+}
+
+
+/* La línea inferior crece cuando pasamos el mouse */
+
+.navegacion-principal a:hover::after {
+
+    width: 70%;
+}
+
+
+/* =========================================================
+   HERO
+   ---------------------------------------------------------
+   El Hero es la sección grande que aparece al inicio
+   de la página.
+
+   Aquí se presenta principalmente a Axel y su trabajo.
+========================================================= */
+
+.hero {
+
+    /* Altura mínima */
+    min-height: 70rem;
+
+    /* Permite colocar elementos encima de la imagen */
+    position: relative;
+
+    /* Imagen principal */
+    background-image:
+        url("../img/principal.png");
+
+    /* Evita repetir la imagen */
+    background-repeat: no-repeat;
+
+    /* Centra la imagen */
+    background-position: center;
+
+    /* Hace que cubra todo el espacio */
+    background-size: cover;
+
+    /* Oculta cualquier elemento que salga */
+    overflow: hidden;
+}
+
+
+/* Capa oscura sobre la imagen */
+
+.contenido-hero {
+
+    /* Ocupa toda la sección */
+    position: absolute;
+
+    inset: 0;
+
+    /* Espacio interno */
+    padding: 3rem;
+
+    /* Degradado oscuro */
+    background:
+        linear-gradient(
+            135deg,
+            rgba(18, 1, 1, 0.94),
+            rgba(91, 5, 5, 0.68),
+            rgba(18, 1, 1, 0.78)
+        );
+
+    /* Flexbox */
+    display: flex;
+
+    /* Elementos verticales */
+    flex-direction: column;
+
+    /* Centra horizontalmente */
+    align-items: center;
+
+    /* Centra verticalmente */
+    justify-content: center;
+
+    /* Centra el texto */
+    text-align: center;
+
+    color: var(--blanco);
+}
+
+
+/* Pequeña etiqueta encima de los títulos */
+
+.hero-etiqueta,
+.seccion-etiqueta {
+
+    font-size: 1.3rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3rem;
+
+    color: var(--rojo);
+
+    margin-bottom: 1rem;
+}
+
+
+.hero-etiqueta {
+
+    color: var(--salmon);
+
+    text-shadow:
+        0 0 10px rgba(237, 81, 81, 0.4);
+}
+
+
+/* Título principal del Hero */
+
+.subtitulo {
+
+    max-width: 90rem;
+
+    margin: 0 auto 2rem;
+
+    color: var(--blanco);
+
+    /* clamp permite que el tamaño cambie dependiendo
+       del tamaño de la pantalla */
+    font-size: clamp(
+        3.5rem,
+        7vw,
+        6.5rem
+    );
+
+    padding: 0;
+
+    text-shadow:
+        0 0 25px rgba(250, 6, 6, 0.35);
+
+    animation: subir 0.8s ease;
+}
+
+
+/* Texto debajo del título */
+
+.hero-texto {
+
+    max-width: 70rem;
+
+    font-size: 1.9rem;
+
+    color: #eeeeee;
+
+    animation: aparecer 1s ease;
+}
+
+
+/* Ubicación */
+
+.place {
+
+    margin-top: 3rem;
+
+    font-weight: 600;
+
+    color: var(--blanco);
+}
+
+
+/* =========================================================
+   BOTONES
+   ---------------------------------------------------------
+   .boton es la clase general para botones y enlaces
+   que funcionan visualmente como botones.
+========================================================= */
+
+.boton {
+
+    /* Permite controlar tamaño y espacio */
+    display: inline-block;
+
+    /* Fondo rojo */
+    background-color: var(--rojo);
+
+    /* Espacio interno */
+    padding: 1.3rem 3rem;
+
+    margin-top: 1rem;
+
+    /* Borde */
+    border: 2px solid var(--rojo);
+
+    /* Bordes redondeados */
+    border-radius: 0.6rem;
+
+    /* Texto blanco */
+    color: var(--blanco);
+
+    /* Letras mayúsculas */
+    text-transform: uppercase;
+
+    /* Negrita */
+    font-weight: 700;
+
+    /* Centra el texto */
+    text-align: center;
+
+    /* Cambia el cursor */
+    cursor: pointer;
+
+    /* Hace suaves los cambios */
+    transition: var(--transicion);
+
+    box-shadow:
+        0 5px 15px rgba(250, 6, 6, 0.25);
+}
+
+
+/* Efecto cuando pasamos el mouse */
+
+.boton:hover {
+
+    background-color: #ff3030;
+
+    border-color: #ff3030;
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 0 30px rgba(250, 6, 6, 0.5);
+}
+
+
+/* Contenedor de los botones del Hero */
+
+.hero-botones {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 1.5rem;
+
+    margin-top: 2rem;
+}
+
+
+/* Segundo botón */
+
+.boton-secundario {
+
+    /* Fondo transparente */
+    background-color: transparent;
+
+    /* Borde blanco */
+    border-color: var(--blanco);
+
+    box-shadow: none;
+}
+
+
+/* Hover del segundo botón */
+
+.boton-secundario:hover {
+
+    background-color: var(--blanco);
+
+    color: var(--negro);
+
+    border-color: var(--blanco);
+
+    box-shadow:
+        0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ---------------------------------------------------------
+   Esta sección organiza la presentación inicial de Axel.
+
+   Se utiliza CSS Grid para dividir el contenido en dos
+   columnas: texto e imagen.
+========================================================= */
+
+main {
+
+    background-color: var(--negro);
+}
+
+
+.inicio-presentacion {
+
+    /* Grid crea columnas */
+    display: grid;
+
+    /* Dos columnas del mismo tamaño */
+ 
+
+    /* Espacio entre columnas */
+    gap: 5rem;
+
+    /* Alineación vertical */
+    align-items: center;
+
+    background-color: var(--negro);
+}
+
+/* Texto de presentación */
+
+.inicio-texto {
+
+    padding: 2rem;
+}
+
+
+/* Título de presentación */
+
+.inicio-texto h2 {
+
+    text-align: left;
+
+    font-size: 4rem;
+
+    color: var(--blanco);
+}
+
+
+/* Párrafos */
+
+.inicio-texto p {
+
+    color: #d5d5d5;
+
+    font-size: 1.7rem;
+}
+
+
+/* Contenedor de la imagen */
+
+.inicio-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.inicio-imagen {
+
+    overflow: hidden;
+    
+
+    border-radius: 1.5rem;
+
+    border:
+        2px solid var(--rojo-oscuro);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Imagen */
+
+.inicio-imagen img {
+
+    width: 100%;
+
+    transition:
+        transform 0.7s ease;
+}
+
+
+/* Zoom al pasar el mouse */
+
+.inicio-imagen:hover img {
+
+    transform: scale(1.15);
+}
+
+
+/* =========================================================
+   TARJETAS DE SERVICIOS
+   ---------------------------------------------------------
+   Estas reglas dan apariencia de tarjetas a los servicios.
+========================================================= */
+
+.tarjeta-inicio {
+
+    /* Degradado oscuro */
+    background:
+        linear-gradient(
+            145deg,
+            #1c0505,
+            #2b0808
+        );
+
+    /* Borde vino */
+    border:
+        1px solid var(--rojo-oscuro);
+
+    /* Bordes redondeados */
+    border-radius: 1.5rem;
+
+    /* Animaciones */
+    transition: var(--transicion);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.55);
+}
+
+
+/* Efecto de la tarjeta */
+
+.tarjeta-inicio:hover {
+
+    /* La tarjeta sube */
+    transform:
+        translateY(-1rem);
+
+    /* Sombra más fuerte */
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.8);
+
+    /* Borde rojo */
+    border-color: var(--rojo);
+}
+
+
+/* Organización de los servicios */
+
+.servicios {
+
+    /* Utiliza Grid */
+    display: grid;
+
+    /* Tres columnas */
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 3rem;
+
+    margin-top: 3rem;
+}
+
+
+/* Contenido individual de cada servicio */
+
+.servicio {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin: 0;
+
+    padding: 3rem;
+
+    text-align: center;
+}
+
+
+/* Texto de los servicios */
+
+.servicio p {
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    color: #d4d4d4;
+}
+
+
+/* =========================================================
+   ICONOS
+   ---------------------------------------------------------
+   Se crea una figura circular para colocar los iconos
+   o símbolos de cada servicio.
+========================================================= */
+
+.servicio .icono {
+
+    height: 11rem;
+
+    width: 11rem;
+
+    flex-shrink: 0;
+
+    /* Degradado rojo y morado */
+    background:
+        linear-gradient(
+            135deg,
+            var(--rojo-oscuro),
+            var(--azul)
+        );
+
+    /* Hace el elemento circular */
+    border-radius: 50%;
+
+    /* Centra el contenido */
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: var(--blanco);
+
+    margin-bottom: 2rem;
+
+    transition: var(--transicion);
+
+    border:
+        2px solid var(--rojo);
+}
+
+
+/* Efecto del icono */
+
+.servicio:hover .icono {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rojo),
+            var(--azul)
+        );
+
+    transform:
+        rotate(5deg)
+        scale(1.08);
+
+    box-shadow:
+        0 0 25px rgba(250, 6, 6, 0.4);
+}
+
+
+/* =========================================================
+   PORTAFOLIO Y CARRUSEL
+   ---------------------------------------------------------
+   Estas reglas controlan la galería de proyectos.
+
+   El carrusel muestra un proyecto a la vez y permite
+   cambiar entre imágenes mediante botones.
+========================================================= */
+
+.proyectos-inicio {
+
+    background:
+        linear-gradient(
+            180deg,
+            #180202,
+            #260404
+        );
+}
+
+
+/* Texto descriptivo del portafolio */
+
+.texto-centro {
+
+    max-width: 70rem;
+
+    margin:
+        0 auto 3rem;
+
+    text-align: center;
+
+    color: #d4d4d4;
+}
+
+
+/* Contenedor principal del carrusel */
+
+.carrusel {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 95rem;
+
+    margin: 4rem auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Área donde aparecen las imágenes */
+
+.carrusel-contenedor {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 1.5rem;
+
+    border:
+        2px solid var(--rojo-oscuro);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.8);
+
+    background-color: var(--negro);
+}
+
+
+/* Cada diapositiva */
+
+.carrusel-slide {
+
+    /* Oculta las diapositivas */
+    display: none;
+
+    position: relative;
+
+    animation: aparecer 0.5s ease;
+}
+
+
+/* La diapositiva activa sí se muestra */
+
+.carrusel-slide.activo {
+
+    display: block;
+}
+
+
+/* Imagen del proyecto */
+
+.carrusel-slide img {
+
+    width: 100%;
+
+    height: 50rem;
+
+    /* Hace que la imagen cubra el espacio */
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease;
+}
+
+
+/* Zoom */
+
+.carrusel-slide:hover img {
+
+    transform: scale(1.2);
+}
+
+
+/* Información que aparece sobre la imagen */
+
+.carrusel-info {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding: 3rem;
+
+    /* Degradado para facilitar la lectura */
+    background:
+        linear-gradient(
+            transparent,
+            rgba(18, 1, 1, 0.98)
+        );
+
+    color: var(--blanco);
+
+    pointer-events: none;
+}
+
+
+.carrusel-info h3 {
+
+    color: var(--salmon);
+
+    text-align: left;
+
+    margin-bottom: 0.5rem;
+}
+
+
+.carrusel-info p {
+
+    margin: 0;
+
+    color: #eeeeee;
+}
+
+
+/* =========================================================
+   BOTONES DEL CARRUSEL
+   ---------------------------------------------------------
+   Estos botones permiten avanzar o retroceder entre
+   los proyectos.
+========================================================= */
+
+.carrusel-btn {
+
+    position: absolute;
+
+    z-index: 10;
+
+    width: 5rem;
+
+    height: 5rem;
+
+    border: 2px solid var(--rojo);
+
+    border-radius: 50%;
+
+    background-color: var(--rojo-oscuro);
+
+    color: var(--blanco);
+
+    font-size: 2.5rem;
+
+    cursor: pointer;
+
+    transition: var(--transicion);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Efecto de los botones */
+
+.carrusel-btn:hover {
+
+    background-color: var(--rojo);
+
+    transform: scale(1.1);
+
+    box-shadow:
+        0 0 25px rgba(250, 6, 6, 0.5);
+}
+
+
+/* Botón anterior */
+
+.anterior {
+
+    left: -2.5rem;
+}
+
+
+/* Botón siguiente */
+
+.siguiente {
+
+    right: -2.5rem;
+}
+
+
+/* =========================================================
+   PUNTOS DEL CARRUSEL
+   ---------------------------------------------------------
+   Los puntos indican qué diapositiva está activa.
+========================================================= */
+
+.carrusel-puntos {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+    margin: 2rem 0;
+}
+
+
+/* Punto individual */
+
+.punto {
+
+    width: 1.2rem;
+
+    height: 1.2rem;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: var(--gris);
+
+    cursor: pointer;
+
+    transition: var(--transicion);
+}
+
+
+/* Punto activo */
+
+.punto.activo {
+
+    background-color: var(--rojo);
+
+    transform: scale(1.3);
+
+    box-shadow:
+        0 0 15px rgba(250, 6, 6, 0.7);
+}
+
+
+/* =========================================================
+   PROCESO DE TRABAJO
+   ---------------------------------------------------------
+   Esta sección muestra las etapas para crear un proyecto.
+========================================================= */
+
+.proceso-inicio {
+
+    background:
+        linear-gradient(
+            135deg,
+            #120101,
+            #300303,
+            #120101
+        );
+
+    color: var(--blanco);
+
+    border-top:
+        2px solid var(--rojo-oscuro);
+
+    border-bottom:
+        2px solid var(--rojo-oscuro);
+}
+
+
+/* Títulos del proceso */
+
+.proceso-inicio h2 {
+
+    color: var(--blanco);
+}
+
+
+/* Cuadrícula de etapas */
+
+.proceso-grid {
+
+    display: grid;
+
+    /* Cuatro columnas */
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 2rem;
+
+    margin-top: 4rem;
+}
+
+
+/* Cada etapa */
+
+.proceso-item {
+
+    padding: 2.5rem;
+
+    /* Línea roja lateral */
+    border-left:
+        3px solid var(--rojo);
+
+    background-color:
+        rgba(91, 5, 5, 0.25);
+
+    transition: var(--transicion);
+}
+
+
+/* Efecto hover */
+
+.proceso-item:hover {
+
+    transform:
+        translateY(-0.7rem);
+
+    background-color:
+        rgba(250, 6, 6, 0.12);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Número de cada etapa */
+
+.numero {
+
+    display: block;
+
+    margin-bottom: 1rem;
+
+    font-size: 3rem;
+
+    font-weight: 700;
+
+    color: var(--rojo);
+}
+
+
+/* Títulos de cada etapa */
+
+.proceso-item h3 {
+
+    color: var(--salmon);
+
+    text-align: left;
+}
+
+
+/* Texto */
+
+.proceso-item p {
+
+    color: #d4d4d4;
+}
+
+
+/* =========================================================
+   FORMULARIO DE CONTACTO
+   ---------------------------------------------------------
+   Esta sección controla el formulario donde el visitante
+   puede enviar sus datos y mensaje.
+========================================================= */
+
+.contacto-inicio {
+
+    text-align: center;
+
+    background-color: var(--negro);
+}
+
+
+.contacto-inicio > .contenedor > p {
+
+    max-width: 65rem;
+
+    margin:
+        0 auto 3rem;
+
+    font-size: 1.8rem;
+
+    color: #d4d4d4;
+}
+
+
+/* Caja principal del formulario */
+
+.formulario {
+
+    background:
+        linear-gradient(
+            145deg,
+            #220505,
+            #120101
+        );
+
+    width: min(70rem, 100%);
+
+    margin: 3rem auto 0;
+
+    padding: 3rem;
+
+    border:
+        1px solid var(--rojo-oscuro);
+
+    border-radius: 1.5rem;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.75);
+}
+
+
+/* Elimina el borde del fieldset */
+
+.formulario fieldset {
+
+    border: none;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+/* Título del formulario */
+
+.formulario legend {
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 2rem;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+    margin-bottom: 3rem;
+
+    color: var(--blanco);
+}
+
+
+/* =========================================================
+   CAMPOS DEL FORMULARIO
+   ---------------------------------------------------------
+   Grid permite organizar los campos en dos columnas.
+========================================================= */
+
+.contenedor-campos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 2rem;
+}
+
+
+/* Cada campo */
+
+.campo {
+
+    margin-bottom: 1rem;
+
+    text-align: left;
+}
+
+
+/* Etiquetas */
+
+.campo label {
+
+    display: block;
+
+    color: var(--salmon);
+
+    font-weight: 700;
+
+    margin-bottom: 0.7rem;
+}
+
+
+/* Inputs y textarea */
+
+.input-text {
+
+    width: 100%;
+
+    border:
+        2px solid #3b1111;
+
+    padding: 1.4rem;
+
+    border-radius: 0.6rem;
+
+    font-family: inherit;
+
+    font-size: 1.6rem;
+
+    outline: none;
+
+    background-color: #180303;
+
+    color: var(--blanco);
+
+    transition: var(--transicion);
+}
+
+
+/* Texto de ayuda dentro del campo */
+
+.input-text::placeholder {
+
+    color: #8f7777;
+}
+
+
+/* Efecto cuando seleccionamos un campo */
+
+.input-text:focus {
+
+    border-color: var(--rojo);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(250, 6, 6, 0.18);
+}
+
+
+/* Área de mensaje */
+
+.campo textarea {
+
+    height: 18rem;
+
+    resize: vertical;
+}
+
+
+/* Botón de enviar */
+
+.enviar {
+
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+    grid-column:
+        1 / -1;
+}
+
+
+.enviar .boton {
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   PIE DE PÁGINA
+   ---------------------------------------------------------
+   footer es la parte inferior de todas las páginas.
+========================================================= */
+
+footer {
+
+    padding: 4rem 2rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            #080000,
+            #1e0303
+        );
+
+    color: var(--blanco);
+
+    text-align: center;
+
+    border-top:
+        3px solid var(--rojo-oscuro);
+}
+
+
+/* Texto del footer */
+
+footer p {
+
+    text-align: center;
+
+    margin-bottom: 2rem;
+
+    color: #d1d1d1;
+}
+
+
+/* =========================================================
+   REDES SOCIALES
+========================================================= */
+
+.redes-sociales {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+}
+
+
+/* Enlaces de redes */
+
+.redes-sociales a {
+
+    padding: 0.8rem 1.5rem;
+
+    border:
+        1px solid #5b0505;
+
+    border-radius: 0.5rem;
+
+    color: var(--blanco);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    background-color: #180303;
+}
+
+
+/* Hover */
+
+.redes-sociales a:hover {
+
+    background-color: var(--rojo);
+
+    border-color: var(--rojo);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(250, 6, 6, 0.4);
+}
+
+
+/* =========================================================
+   GALERÍAS
+   ---------------------------------------------------------
+   Estas reglas también sirven para las páginas de
+   Portafolio y Sobre mí.
+========================================================= */
+
+.galeria {
+
+    display: grid;
+
+    /* Dos columnas */
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 3rem;
+
+    margin-top: 3rem;
+}
+
+
+/* Imágenes de la galería */
+
+.galeria img {
+
+    width: 100%;
+
+    max-width: 80rem;
+
+    height: auto;
+
+    margin: 0 auto;
+
+    border-radius: 1.5rem;
+
+    border:
+        2px solid var(--rojo-oscuro);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.7);
+
+    transition:
+        transform 0.6s ease,
+        box-shadow 0.6s ease;
+
+    cursor: pointer;
+}
+
+
+/* Zoom de las imágenes */
+
+.galeria img:hover {
+
+    transform:
+        scale(1.12);
+
+    box-shadow:
+        0 25px 50px
+        rgba(250, 6, 6, 0.2);
+
+    position: relative;
+
+    z-index: 20;
+
+    border-color:
+        var(--rojo);
+}
+
+
+/* =========================================================
+   IMÁGENES DE SERVICIOS
+   ---------------------------------------------------------
+   Controla las imágenes utilizadas en la página
+   de Servicios.
+========================================================= */
+
+.servicio img {
+
+    width: 100%;
+
+    max-width: 45rem;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 1.5rem;
+
+    margin-bottom: 2rem;
+
+    border:
+        2px solid var(--rojo-oscuro);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.7);
+
+    transition:
+        transform 0.6s ease,
+        box-shadow 0.6s ease,
+        border-color 0.6s ease;
+}
+
+
+/* Zoom de las imágenes de servicios */
+
+.servicio img:hover {
+
+    transform:
+        scale(1.12);
+
+    box-shadow:
+        0 20px 45px
+        rgba(250, 6, 6, 0.25);
+
+    position: relative;
+
+    z-index: 20;
+
+    border-color:
+        var(--rojo);
+}
+
+
+/* =========================================================
+   SOMBRA GENERAL
+   ---------------------------------------------------------
+   .sombra es una clase que podemos colocar en cualquier
+   contenedor para darle profundidad.
+========================================================= */
+
+.sombra {
+
+    box-shadow: var(--sombra);
+
+    border-radius: 2rem;
+
+    background-color: var(--negro);
+
+    padding: 0;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   ANIMACIÓN APARECER
+   ---------------------------------------------------------
+   Hace que un elemento pase de transparente a visible.
+========================================================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+}
+
+
+/* =========================================================
+   ANIMACIÓN SUBIR
+   ---------------------------------------------------------
+   Hace que un elemento aparezca mientras sube ligeramente.
+========================================================= */
+
+@keyframes subir {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(3rem);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ---------------------------------------------------------
+   Estas reglas cambian el diseño cuando la pantalla
+   es más pequeña.
+
+   Responsive significa que la página se adapta a
+   celulares, tablets y computadoras.
+========================================================= */
+
+@media (min-width: 400px) {
+
+    /* En pantallas mayores a 400px el menú puede
+       colocarse horizontalmente */
+
+    .navegacion-principal {
+
+        flex-direction: row;
+
+        justify-content: space-between;
+    }
+
+
+    .navegacion-principal a {
+
+        width: auto;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    /* Los servicios pasan de 3 a 2 columnas */
+
+    .servicios {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* El proceso pasa a 2 columnas */
+
+    .proceso-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* La presentación pasa a una sola columna */
+
+    .inicio-presentacion {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Centra el texto */
+
+    .inicio-texto {
+
+        text-align: center;
+    }
+
+
+    .inicio-texto h2 {
+
+        text-align: center;
+    }
+
+
+    /* La galería pasa a una columna */
+
+    .galeria {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Reduce la altura de las imágenes del carrusel */
+
+    .carrusel-slide img {
+
+        height: 40rem;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — CELULAR
+   ---------------------------------------------------------
+   Aquí se realizan cambios específicos para teléfonos.
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Reduce el tamaño del título */
+
+    .titulo {
+
+        font-size: 3rem;
+    }
+
+
+    .titulo span {
+
+        font-size: 1.4rem;
+
+        letter-spacing: 0.2rem;
+    }
+
+
+    /* El menú se coloca verticalmente */
+
+    .navegacion-principal {
+
+        flex-direction: column;
+    }
+
+
+    .navegacion-principal a {
+
+        width: 100%;
+    }
+
+
+    /* Reduce el Hero */
+
+    .hero {
+
+        min-height: 60rem;
+    }
+
+
+    /* Reduce el título principal */
+
+    .subtitulo {
+
+        font-size: 3.2rem;
+    }
+
+
+    .hero-texto {
+
+        font-size: 1.6rem;
+    }
+
+
+    /* Los botones se colocan verticalmente */
+
+    .hero-botones {
+
+        flex-direction: column;
+
+        width: 100%;
+
+        max-width: 35rem;
+    }
+
+
+    .hero-botones .boton {
+
+        width: 100%;
+    }
+
+
+    /* Reduce el espacio de las secciones */
+
+    .seccion {
+
+        padding:
+            4rem 1.5rem;
+    }
+
+
+    /* Servicios en una columna */
+
+    .servicios {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Proceso en una columna */
+
+    .proceso-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Formulario en una columna */
+
+    .contenedor-campos {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* El campo que ocupaba dos columnas vuelve
+       a ocupar una */
+
+    .enviar {
+
+        grid-column: auto;
+    }
+
+
+    /* Botones del carrusel más pequeños */
+
+    .carrusel-btn {
+
+        width: 4rem;
+
+        height: 4rem;
+
+        font-size: 2rem;
+    }
+
+
+    .anterior {
+
+        left: 0.5rem;
+    }
+
+
+    .siguiente {
+
+        right: 0.5rem;
+    }
+
+
+    /* Imagen del carrusel más pequeña */
+
+    .carrusel-slide img {
+
+        height: 30rem;
+    }
+
+
+    /* Información sobre la imagen */
+
+    .carrusel-info {
+
+        padding: 2rem 5rem;
+    }
+
+
+    /* Reduce el zoom en celulares */
+
+    .carrusel-slide:hover img {
+
+        transform: scale(1.08);
+    }
+
+
+    .servicio img:hover,
+    .galeria img:hover {
+
+        transform: scale(1.05);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCIR ANIMACIONES
+   ---------------------------------------------------------
+   Algunas personas prefieren reducir las animaciones.
+   Esta regla respeta esa configuración del dispositivo.
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}

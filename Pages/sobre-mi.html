@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--
+        HEAD:
+        Contiene la información general de la página.
+        Aquí no se muestra directamente el contenido principal.
+    -->
+
+    <meta charset="UTF-8">
+
+    <!--
+        Permite que la página se adapte a celulares, tablets y computadoras.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        Título que aparecerá en la pestaña del navegador.
+    -->
+    <title>Sobre mí | Axel Diaz</title>
+
+    <!--
+        Conectamos este archivo HTML con nuestro archivo CSS.
+        Como estamos dentro de la carpeta "pages", usamos ../
+        para regresar una carpeta.
+    -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+
+<body>
+    <header>
+
+        <!--
+            TÍTULO PRINCIPAL DEL SITIO.
+            Puedes cambiar "Axel Diaz" por otro nombre si fuera necesario.
+        -->
+    
+
+
+    <!-- =========================================================
+         MENÚ DE NAVEGACIÓN
+         ========================================================= -->
+
+    <div class="nav-bg">
+
+        <nav class="navegacion-principal">
+
+            <!--
+                Cada enlace lleva a una página diferente.
+                Como esta página está dentro de "pages", las rutas
+                deben comenzar con ../
+            -->
+
+            <a href="../index.html">Inicio</a>
+
+            <a href="sobre-mi.html">Sobre mí</a>
+
+            <a href="servicios.html">Servicios</a>
+
+            <a href="portafolio.html">Portafolio</a>
+
+        </nav>
+
+    </div>
+
+        <!-- =====================================================
+             1. HERO DE SOBRE MÍ
+             ===================================================== -->
+
+        <section class="hero">
+
+            <!--
+                Esta imagen ocupa visualmente la sección principal.
+                Sirve para que la página no comience solamente con texto.
+
+                IMAGEN:
+                sobre-mi-axel.png
+            -->
+
+            <div class="contenido-hero">
+
+                <p class="hero-etiqueta">
+                    SOBRE MÍ
+                </p>
+
+                <p class="hero-texto">
+                    Conoce mi forma de pensar, crear y desarrollar proyectos digitales.
+                </p>
+
+                <a class="boton" href="#historia">
+                    Conocer más
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             2. PRESENTACIÓN
+             ===================================================== -->
+
+        <section class="seccion inicio-presentacion">
+
+            <div class="inicio-texto">
+
+                <p class="hero-etiqueta">
+                    ¿QUIÉN SOY?
+                </p>
+
+                <h2>
+                    Hola, soy Axel Diaz
+                </h2>
+
+                <p>
+                    Soy diseñador web y me interesa crear experiencias digitales
+                    que sean atractivas, funcionales y fáciles de utilizar.
+                </p>
+
+                <p>
+                    Me gusta combinar creatividad, tecnología y diseño para
+                    transformar ideas en proyectos digitales.
+                </p>
+
+            </div>
+
+
+            <!--
+                Segunda aparición de una imagen para hacer la sección
+                más visual.
+
+                IMAGEN:
+                espacio-creativo-axel.png
+            -->
+
+            <div class="inicio-imagen">
+
+                <img
+                    src="../img/espacio-creativo-axel.png"
+                    alt="Espacio creativo de Axel Diaz"
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             3. GALERÍA VISUAL
+             ===================================================== -->
+
+        <section class="seccion">
+
+            <p class="hero-etiqueta">
+                MI MUNDO CREATIVO
+            </p>
+
+            <h2>
+                Diseño, ideas y creatividad
+            </h2>
+
+            <p class="texto-centro">
+                Una parte importante de mi trabajo comienza mucho antes de escribir código:
+                observar, imaginar, organizar y crear.
+            </p>
+
+
+            <!--
+                GALERÍA:
+                Aquí mostramos varias imágenes juntas.
+
+                Las imágenes se adaptan automáticamente mediante CSS.
+            -->
+
+            <div class="galeria">
+
+                <!-- IMAGEN 1 -->
+                <div class="tarjeta-inicio">
+
+                    <img
+                        src="../img/proceso-creativo-axel.png"
+                        alt="Proceso creativo y diseño UX UI"
+                    >
+
+                    <h3>
+                        Proceso creativo
+                    </h3>
+
+                    <p>
+                        Las ideas comienzan con bocetos, referencias y conceptos.
+                    </p>
+
+                </div>
+
+
+                <!-- IMAGEN 2 -->
+                <div class="tarjeta-inicio">
+
+                    <img
+                        src="../img/diseno-responsive-axel.png"
+                        alt="Diseño web adaptable a diferentes dispositivos"
+                    >
+
+                    <h3>
+                        Diseño responsive
+                    </h3>
+
+                    <p>
+                        Una experiencia pensada para computadora, tablet y celular.
+                    </p>
+
+                </div>
+
+
+                <!-- IMAGEN 3 -->
+                <div class="tarjeta-inicio">
+
+                    <img
+                        src="../img/espacio-inspiracion-axel.png"
+                        alt="Espacio de inspiración para diseño web"
+                    >
+
+                    <h3>
+                        Inspiración
+                    </h3>
+
+                    <p>
+                        Referencias, tecnología y creatividad forman parte del proceso.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             4. MI HISTORIA
+             ===================================================== -->
+
+        <section class="seccion" id="historia">
+
+            <p class="hero-etiqueta">
+                MI HISTORIA
+            </p>
+
+            <h2>
+                De una idea a un proyecto
+            </h2>
+
+
+            <div class="inicio-presentacion">
+
+                <div class="inicio-imagen">
+
+                    <!--
+                        IMAGEN:
+                        portafolio-axel.png
+                    -->
+
+                    <img
+                        src="../img/portafolio-axel.png"
+                        alt="Portafolio digital de Axel Diaz"
+                    >
+
+                </div>
+
+
+                <div class="inicio-texto">
+
+                    <p>
+                        Mi interés por el diseño web comenzó al descubrir cómo
+                        una idea puede convertirse en una experiencia digital.
+                    </p>
+
+                    <p>
+                        Poco a poco fui aprendiendo herramientas de diseño,
+                        HTML y CSS, hasta encontrar una forma de combinar
+                        creatividad y desarrollo.
+                    </p>
+
+                    <p>
+                        Cada proyecto representa una oportunidad para aprender
+                        algo nuevo y mejorar la manera de diseñar.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             5. MI FORMA DE TRABAJAR
+             ===================================================== -->
+
+        <section class="seccion">
+
+            <p class="hero-etiqueta">
+                MI FORMA DE TRABAJAR
+            </p>
+
+            <h2>
+                Ideas que siguen un proceso
+            </h2>
+
+
+            <div class="servicios">
+
+
+                <!-- CREATIVIDAD -->
+
+                <div class="servicio">
+
+                    <div class="icono">
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                        >
+                            <path d="M9 18h6"></path>
+                            <path d="M10 22h4"></path>
+                            <path d="M8 14c-1.2-1-2-2.5-2-4.2A6 6 0 0 1 18 10c0 1.7-.8 3.2-2 4.2-.7.6-1 1.2-1 2.1H9c0-.9-.3-1.5-1-2.1Z"></path>
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Creatividad
+                    </h3>
+
+                    <p>
+                        Buscar nuevas ideas y convertirlas en propuestas visuales.
+                    </p>
+
+                </div>
+
+
+                <!-- ORGANIZACIÓN -->
+
+                <div class="servicio">
+
+                    <div class="icono">
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                        >
+                            <rect x="3" y="4" width="18" height="17" rx="2"></rect>
+                            <path d="M8 2v4"></path>
+                            <path d="M16 2v4"></path>
+                            <path d="M3 10h18"></path>
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Organización
+                    </h3>
+
+                    <p>
+                        Planificar cada etapa antes de comenzar el desarrollo.
+                    </p>
+
+                </div>
+
+
+                <!-- APRENDIZAJE -->
+
+                <div class="servicio">
+
+                    <div class="icono">
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                        >
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path>
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Aprendizaje
+                    </h3>
+
+                    <p>
+                        Explorar nuevas herramientas y mejorar constantemente.
+                    </p>
+
+                </div>
+
+
+                <!-- EXPERIENCIA -->
+
+                <div class="servicio">
+
+                    <div class="icono">
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                        >
+                            <path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 17l-6.5 4 2-7.5L2 9h7l3-7Z"></path>
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Experiencia
+                    </h3>
+
+                    <p>
+                        Aprender de cada proyecto para seguir evolucionando.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             6. GALERÍA DE TRABAJO
+             ===================================================== -->
+
+        <section class="seccion">
+
+            <p class="hero-etiqueta">
+                DISEÑO DIGITAL
+            </p>
+
+            <h2>
+                Así se ve mi proceso
+            </h2>
+
+            <p class="texto-centro">
+                El diseño no termina en una pantalla. Cada detalle forma parte
+                de una experiencia.
+            </p>
+
+
+            <div class="galeria">
+
+
+                <!-- IMAGEN 4 -->
+
+                <div class="tarjeta-inicio">
+
+                    <img
+                        src="../img/inspiracion-creativa-axel.png"
+                        alt="Inspiración creativa de Axel Diaz"
+                    >
+
+                    <h3>
+                        Inspiración
+                    </h3>
+
+                    <p>
+                        Buscar referencias para construir una identidad visual.
+                    </p>
+
+                </div>
+
+
+                <!-- IMAGEN 5 -->
+
+                <div class="tarjeta-inicio">
+
+                    <img
+                        src="../img/ideas-que-cobran-vida.png"
+                        alt="Ideas de diseño web que cobran vida"
+                    >
+
+                    <h3>
+                        De la idea a la pantalla
+                    </h3>
+
+                    <p>
+                        Convertir conceptos en interfaces digitales.
+                    </p>
+
+                </div>
+
+
+                <!-- IMAGEN 6 -->
+
+                <div class="tarjeta-inicio">
+
+                    <img
+                        src="../img/sobre-mi-axel.png"
+                        alt="Axel Diaz trabajando en diseño web"
+                    >
+
+                    <h3>
+                        Trabajo y desarrollo
+                    </h3>
+
+                    <p>
+                        Crear, probar y mejorar hasta encontrar el resultado.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             7. OBJETIVO
+             ===================================================== -->
+
+        <section class="seccion inicio-presentacion">
+
+            <div class="inicio-texto">
+
+                <p class="hero-etiqueta">
+                    MI OBJETIVO
+                </p>
+
+                <h2>
+                    Crear experiencias digitales
+                </h2>
+
+                <p>
+                    Mi objetivo es desarrollar sitios web que no solamente
+                    se vean bien, sino que también comuniquen una idea,
+                    sean fáciles de utilizar y tengan una identidad propia.
+                </p>
+
+                <p>
+                    Cada proyecto es una oportunidad para experimentar,
+                    aprender y llevar una idea un poco más lejos.
+                </p>
+
+            </div>
+
+
+            <!--
+                Utilizamos nuevamente una imagen diferente para cerrar
+                visualmente esta sección.
+            -->
+
+            <div class="inicio-imagen">
+
+                <img
+                    src="../img/diseno-responsive-axel.png"
+                    alt="Experiencia digital adaptable"
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             8. FRASE VISUAL FINAL
+             ===================================================== -->
+
+        <section class="seccion">
+
+            <div class="tarjeta-inicio">
+
+                <img
+                    src="../img/proceso-creativo-axel.png"
+                    alt="Proceso creativo de diseño web"
+                >
+
+                
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             9. LLAMADA A LA ACCIÓN
+             ===================================================== -->
+
+        <section class="seccion contacto-inicio">
+
+            <p class="hero-etiqueta">
+                ¿TIENES UN PROYECTO?
+            </p>
+
+            <h2>
+                Hagamos que tu idea cobre vida
+            </h2>
+
+            <p class="texto-centro">
+                Conoce mis servicios y descubre cómo puedo ayudarte
+                a crear una experiencia digital.
+            </p>
+
+            <div class="hero-botones">
+
+                <a
+                    class="boton"
+                    href="servicios.html"
+                >
+                    Ver servicios
+                </a>
+
+                <a
+                    class="boton boton-secundario"
+                    href="portafolio.html"
+                >
+                    Ver portafolio
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         PIE DE PÁGINA
+         ========================================================= -->
+ <footer>
+
+        <p>
+            Todos los derechos reservados
+            Axel Diaz Zavala
+        </p>
+
+        
+        <!-- FACEBOOK -->
+
+        <a href="https://www.facebook.com/axeldz.axeldz">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+
+                <path stroke="none"
+                    d="M0 0h24v24H0z"
+                    fill="none" />
+
+                <path d="M7 10v4h3v7h4v-7h3l1-4h-4v-2
+                a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2h-3" />
+
+            </svg>
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a href="https://www.instagram.com/axel_diaz_z/">
+
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+
+                <path stroke="none"
+                    d="M0 0h24v24H0z"
+                    fill="none" />
+
+                <path d="M4 8a4 4 0 0 1 4-4h8
+                a4 4 0 0 1 4 4v8
+                a4 4 0 0 1-4 4h-8
+                a4 4 0 0 1-4-4z" />
+
+                <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0" />
+
+                <path d="M16.5 7.5v.01" />
+
+            </svg>
+
+        </a>
+
+
+        <!-- TIKTOK -->
+
+        <a href="https://www.tiktok.com/@axel_diaz_">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+
+                <path stroke="none"
+                    d="M0 0h24v24H0z"
+                    fill="none" />
+
+                <path d="M21 7.917v4.034
+                a9.948 9.948 0 0 1-5-1.951v4.5
+                a6.5 6.5 0 1 1-8-6.326v4.326
+                a2.5 2.5 0 1 0 4 2v-11.5h4.083
+                a6.005 6.005 0 0 0 4.917 4.917" />
+
+            </svg>
+
+        </a>
+
+
+        <!-- SPOTIFY -->
+
+         <a href="https://open.spotify.com/intl-es?flow_ctx=c621ab8a-4e77-4fb7-b5ea-9d1885986080%3A1787356863">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-spotify">
+	                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+	                <path d="M8 11.973c2.5 -1.473 5.5 -.973 7.5 .527" />
+	                <path d="M9 15c1.5 -1 4 -1 5 .5" />
+	                <path d="M7 9c2 -1 6 -2 10 .5" />
+                  
+                
+                </svg>
+
+    </footer>
+
+    <!--
+        JAVASCRIPT:
+        Este archivo puede contener las funciones interactivas
+        de la página.
+
+        Si todavía no tienes este archivo, puedes quitar esta línea
+        temporalmente para evitar errores.
+    -->
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

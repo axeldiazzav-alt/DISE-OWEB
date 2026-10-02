@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<!-- =====================================================
+         CONFIGURACIÓN DEL DOCUMENTO
+         -----------------------------------------------------
+         Esta parte contiene información que el navegador
+         necesita para interpretar correctamente la página.
+
+         lang="es" indica que la página está escrita en español.
+
+         charset="UTF-8" permite utilizar letras, símbolos
+         y caracteres especiales correctamente.
+
+         viewport hace que la página se adapte a celulares,
+         tablets y computadoras.
+    ====================================================== -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- =====================================================
+         TÍTULO DE LA PÁGINA
+         -----------------------------------------------------
+         <title> define el nombre que aparece en la pestaña
+         del navegador.
+
+         Se puede cambiar por cualquier otro título.
+    ====================================================== -->
+<title>Axel Diaz | Diseño Web</title>
+<!-- =====================================================
+         HOJA DE ESTILOS
+         -----------------------------------------------------
+         <link> conecta este archivo HTML con el archivo CSS.
+
+         ../css/styles.css significa que el archivo styles.css
+         está dentro de la carpeta "css".
+
+         Si cambias el nombre o ubicación del CSS, también
+         tendrás que cambiar esta dirección.
+    ====================================================== -->
+<link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- =====================================================
+         ENCABEZADO
+         -----------------------------------------------------
+         <header> representa la parte superior de la página.
+
+         Aquí se muestra el nombre de Axel y la especialidad
+         del sitio.
+
+         Puedes cambiar:
+         - El nombre.
+         - El texto de la especialidad.
+         - Los textos que aparecen dentro.
+    ====================================================== -->
+<header>
+<!--
+            <h1> es el título principal de la página.
+
+            Es recomendable utilizar un <h1> para el título
+            principal del sitio.
+        -->
+<h1 class="titulo">
+
+            Axel Diaz
+
+            <!--
+                <span> permite separar una parte del texto
+                para darle un estilo diferente desde CSS.
+            -->
+<span>
+                Diseño Web Creativo
+            </span>
+</h1>
+</header>
+<!-- =====================================================
+         MENÚ DE NAVEGACIÓN
+         -----------------------------------------------------
+         <nav> contiene los enlaces principales del sitio.
+
+         Cada <a> lleva al usuario a una página diferente.
+
+         Puedes cambiar:
+         - El nombre que aparece en el menú.
+         - La dirección de cada enlace.
+         - Agregar o eliminar páginas.
+    ====================================================== -->
+<div class="nav-bg">
+<nav class="navegacion-principal contenedor">
+<!-- Enlace hacia la página principal -->
+<a href="index.html">
+                Inicio
+            </a>
+<!-- Enlace hacia la página Sobre mí -->
+<a href="pages/sobre-mi.html">
+                Sobre mí
+            </a>
+<!-- Enlace hacia la página Servicios -->
+<a href="pages/servicios.html">
+                Servicios
+            </a>
+<!-- Enlace hacia la página Portafolio -->
+<a href="pages/portafolio.html">
+                Portafolio
+            </a>
+</nav>
+</div>
+<!-- =====================================================
+         CONTENIDO PRINCIPAL
+         -----------------------------------------------------
+         <main> contiene el contenido principal de la página.
+
+         Una página HTML normalmente debe tener un <main>
+         para identificar el contenido principal.
+    ====================================================== -->
+<main>
+<!-- =================================================
+             HERO / PRESENTACIÓN PRINCIPAL
+             -------------------------------------------------
+             El Hero es la sección grande que aparece primero.
+
+             Su función es llamar la atención y explicar
+             rápidamente quién es Axel y qué hace.
+
+             La imagen de fondo se controla desde CSS.
+        ================================================== -->
+<section class="hero">
+<!--
+                Esta capa permite colocar texto y botones
+                encima de la imagen principal.
+            -->
+<div class="contenido-hero">
+<!-- Pequeña etiqueta superior -->
+<p class="hero-etiqueta">
+                    DISEÑO WEB · CREATIVIDAD · TECNOLOGÍA
+                </p>
+<!--
+                    Título principal.
+
+                    Puedes cambiar este texto por otra frase
+                    que represente a Axel.
+                -->
+<h2 class="subtitulo">
+                    Creo experiencias digitales que
+                    convierten ideas en sitios web.
+                </h2>
+<!--
+                    Texto descriptivo.
+
+                    Aquí se puede explicar brevemente
+                    qué hace Axel y qué ofrece.
+                -->
+<p class="hero-texto">
+
+                    Diseño páginas web modernas, funcionales
+                    y atractivas para proyectos que buscan
+                    tener una presencia profesional en internet.
+
+                </p>
+<!--
+                    Contenedor de los botones.
+
+                    Flexbox se encarga de acomodarlos mediante
+                    las reglas del archivo CSS.
+                -->
+<div class="hero-botones">
+<!--
+                        Primer botón.
+
+                        href="#" puede cambiarse por el enlace
+                        hacia la sección o página que quieras.
+                    -->
+<a class="boton" href="#contacto">
+                        Trabajemos juntos
+                    </a>
+<!--
+                        Segundo botón.
+
+                        Este lleva al portafolio.
+                    -->
+<a class="boton boton-secundario" href="pages/portafolio.html">
+                        Ver portafolio
+                    </a>
+</div>
+<!--
+                    Ubicación.
+
+                    Puedes cambiar Aguascalientes por otra
+                    ciudad si fuera necesario.
+                -->
+<p class="place">
+                    📍 Aguascalientes, Ags.
+                </p>
+</div>
+</section>
+<!-- =================================================
+             PRESENTACIÓN
+             -------------------------------------------------
+             Esta sección presenta a Axel de una manera
+             breve.
+
+             Está dividida en dos partes:
+             1. Texto.
+             2. Imagen.
+
+             La distribución se realiza mediante CSS Grid.
+        ================================================== -->
+<section class="seccion inicio-presentacion">
+<div class="contenedor inicio-presentacion">
+<!-- =========================================
+                     TEXTO DE PRESENTACIÓN
+                     -----------------------------------------
+                     Aquí se explica quién es Axel y cuál es
+                     su enfoque como diseñador web.
+                ========================================== -->
+<div class="inicio-texto">
+<p class="seccion-etiqueta">
+                        SOBRE EL DISEÑO
+                    </p>
+<h2>
+                        Diseño con intención
+                    </h2>
+<p>
+
+                        Soy Axel Diaz, diseñador web enfocado
+                        en crear experiencias digitales que
+                        combinan creatividad, estructura y
+                        tecnología.
+
+                    </p>
+<p>
+
+                        Cada proyecto comienza con una idea.
+                        Mi objetivo es convertirla en una
+                        página clara, atractiva y fácil de
+                        utilizar.
+
+                    </p>
+<!--
+                        Este botón lleva a la página completa
+                        "Sobre mí".
+
+                        Si cambias el nombre del archivo,
+                        también debes modificar href.
+                    -->
+<a class="boton" href="pages/sobre-mi.html">
+                        Conoce más sobre mí
+                    </a>
+</div>
+<!-- =========================================
+                     IMAGEN DE PRESENTACIÓN
+                     -----------------------------------------
+                     Cambia el archivo dentro de src si
+                     quieres utilizar otra imagen.
+
+                     Actualmente utiliza:
+                     img/Mi creatividad.png
+                ========================================== -->
+<div class="inicio-imagen">
+<img alt="Diseño web y creatividad de Axel Diaz" src="img/Mi creatividad.png"/>
+</div>
+</div>
+</section>
+<!-- =================================================
+             SERVICIOS PRINCIPALES
+             -------------------------------------------------
+             Aquí se presentan rápidamente los principales
+             servicios que ofrece Axel.
+
+             Las tarjetas se organizan mediante CSS Grid.
+
+             Cada servicio tiene:
+             - Icono.
+             - Título.
+             - Descripción.
+        ================================================== -->
+<section class="seccion">
+<div class="contenedor">
+<p class="seccion-etiqueta">
+                    LO QUE HAGO
+                </p>
+<h2>
+                    Áreas de trabajo
+                </h2>
+<p class="texto-centro">
+
+                    Desarrollo soluciones digitales pensadas
+                    para que cada proyecto tenga una identidad
+                    propia y una experiencia sencilla para
+                    sus usuarios.
+
+                </p>
+<div class="servicios">
+<!-- =====================================
+                         SERVICIO 1
+                         -------------------------------------
+                         UX/UI se enfoca en la experiencia
+                         y apariencia de una página.
+                    ====================================== -->
+<article class="servicio tarjeta-inicio">
+<div class="icono">
+                            UX
+                        </div>
+<h3>
+                            Diseño UX/UI
+                        </h3>
+<p>
+
+                            Diseño interfaces claras y
+                            atractivas pensando en cómo
+                            interactúan los usuarios con
+                            cada elemento.
+
+                        </p>
+</article>
+<!-- =====================================
+                         SERVICIO 2
+                         -------------------------------------
+                         Frontend es la parte visual que
+                         el usuario puede ver e interactuar.
+                    ====================================== -->
+<article class="servicio tarjeta-inicio">
+<div class="icono">
+                            &lt;/&gt;
+                        </div>
+<h3>
+                            Desarrollo Frontend
+                        </h3>
+<p>
+
+                            Transformo diseños en páginas
+                            funcionales utilizando HTML,
+                            CSS y herramientas web.
+
+                        </p>
+</article>
+<!-- =====================================
+                         SERVICIO 3
+                         -------------------------------------
+                         Backend trabaja con la lógica y
+                         funcionamiento interno de un sitio.
+                    ====================================== -->
+<article class="servicio tarjeta-inicio">
+<div class="icono">
+                            DB
+                        </div>
+<h3>
+                            Desarrollo Backend
+                        </h3>
+<p>
+
+                            Trabajo con la estructura interna
+                            de los proyectos para conectar
+                            datos, funciones y servicios.
+
+                        </p>
+</article>
+</div>
+<!--
+                    Este botón lleva a la página donde se
+                    explican todos los servicios.
+
+                    Se puede cambiar el texto o el enlace.
+                -->
+<div class="texto-centro">
+<a class="boton" href="pages/servicios.html">
+                        Ver todos los servicios
+                    </a>
+</div>
+</div>
+</section>
+<!-- =================================================
+             PORTAFOLIO DESTACADO
+             -------------------------------------------------
+             Esta sección muestra algunos proyectos destacados.
+
+             El carrusel permite presentar varias imágenes
+             sin ocupar demasiado espacio en la página.
+
+             El funcionamiento de los botones necesita
+             JavaScript.
+        ================================================== -->
+<section class="seccion proyectos-inicio">
+<div class="contenedor">
+<p class="seccion-etiqueta">
+                    PROYECTOS
+                </p>
+<h2>
+                    Una muestra de mi trabajo
+                </h2>
+<p class="texto-centro">
+
+                    Algunos proyectos que muestran mi forma
+                    de trabajar con diseño, estructura,
+                    creatividad y desarrollo web.
+
+                </p>
+<!-- =========================================
+                     CARRUSEL
+                     -----------------------------------------
+                     Cada .carrusel-slide representa una
+                     diapositiva diferente.
+                ========================================== -->
+<div class="carrusel">
+<!-- Botón anterior -->
+<button aria-label="Proyecto anterior" class="carrusel-btn anterior" type="button">
+                        ‹
+                    </button>
+<!-- Contenedor de las imágenes -->
+<div class="carrusel-contenedor">
+<!-- =================================
+                             PROYECTO 1
+                        ================================== -->
+<article class="carrusel-slide activo">
+<img alt="Proyecto de diseño web de Axel Diaz" src="img/Proyecto de diseño web.png"/>
+<div class="carrusel-info">
+<h3>
+                                    Proyecto Web
+                                </h3>
+<p>
+                                    Diseño de una propuesta
+                                    digital con enfoque visual
+                                    y funcional.
+                                </p>
+</div>
+</article>
+<!-- =================================
+                             PROYECTO 2
+                        ================================== -->
+<article class="carrusel-slide">
+<img alt="Segundo proyecto de diseño web" src="img/Proyecto de diseño web 2.png"/>
+<div class="carrusel-info">
+<h3>
+                                    Interfaz Digital
+                                </h3>
+<p>
+                                    Propuesta enfocada en
+                                    organización, navegación
+                                    y experiencia de usuario.
+                                </p>
+</div>
+</article>
+<!--
+                            Puedes agregar más proyectos
+                            copiando una estructura .carrusel-slide
+                            y cambiando la imagen y el texto.
+                        -->
+</div>
+<!-- Botón siguiente -->
+<button aria-label="Siguiente proyecto" class="carrusel-btn siguiente" type="button">
+                        ›
+                    </button>
+</div>
+<!-- =========================================
+                     INDICADORES DEL CARRUSEL
+                     -----------------------------------------
+                     Estos pequeños puntos indican qué
+                     proyecto está seleccionado.
+                ========================================== -->
+<div class="carrusel-puntos">
+<button aria-label="Mostrar proyecto 1" class="punto activo" type="button"></button>
+<button aria-label="Mostrar proyecto 2" class="punto" type="button"></button>
+</div>
+<!-- Botón hacia el portafolio completo -->
+<div class="texto-centro">
+<a class="boton boton-secundario" href="pages/portafolio.html">
+                        Explorar portafolio
+                    </a>
+</div>
+</div>
+</section>
+<!-- =================================================
+             PROCESO DE TRABAJO
+             -------------------------------------------------
+             Esta sección explica de manera sencilla cómo
+             se desarrolla un proyecto desde la idea hasta
+             la entrega.
+        ================================================== -->
+<section class="seccion proceso-inicio">
+<div class="contenedor">
+<p class="seccion-etiqueta">
+                    MI PROCESO
+                </p>
+<h2>
+                    De una idea a una experiencia digital
+                </h2>
+<div class="proceso-grid">
+<!-- =====================================
+                         PASO 1
+                    ====================================== -->
+<article class="proceso-item">
+<span class="numero">
+                            01
+                        </span>
+<h3>
+                            Idea
+                        </h3>
+<p>
+
+                            Conozco el proyecto, sus objetivos
+                            y lo que necesita comunicar.
+
+                        </p>
+</article>
+<!-- =====================================
+                         PASO 2
+                    ====================================== -->
+<article class="proceso-item">
+<span class="numero">
+                            02
+                        </span>
+<h3>
+                            Diseño
+                        </h3>
+<p>
+
+                            Organizo la información y creo
+                            una propuesta visual para el sitio.
+
+                        </p>
+</article>
+<!-- =====================================
+                         PASO 3
+                    ====================================== -->
+<article class="proceso-item">
+<span class="numero">
+                            03
+                        </span>
+<h3>
+                            Desarrollo
+                        </h3>
+<p>
+
+                            Convierto el diseño en una página
+                            funcional utilizando tecnologías web.
+
+                        </p>
+</article>
+<!-- =====================================
+                         PASO 4
+                    ====================================== -->
+<article class="proceso-item">
+<span class="numero">
+                            04
+                        </span>
+<h3>
+                            Lanzamiento
+                        </h3>
+<p>
+
+                            Reviso el proyecto y preparo el
+                            sitio para que pueda ser utilizado.
+
+                        </p>
+</article>
+</div>
+</div>
+</section>
+<!-- =================================================
+             CONTACTO
+             -------------------------------------------------
+             Esta sección permite que los visitantes puedan
+             enviar información para ponerse en contacto.
+
+             El formulario visualmente funciona con HTML y CSS.
+             Para enviar los datos realmente a un correo o
+             servidor se necesita posteriormente conectar
+             algún servicio o backend.
+        ================================================== -->
+<section class="seccion contacto-inicio" id="contacto">
+<div class="contenedor">
+<p class="seccion-etiqueta">
+                    CONTACTO
+                </p>
+<h2>
+                    ¿Tienes un proyecto en mente?
+                </h2>
+<p>
+
+                    Cuéntame tu idea y podemos convertirla
+                    en una experiencia digital.
+
+                </p>
+<!-- =========================================
+                     FORMULARIO
+                     -----------------------------------------
+                     <form> contiene los campos que el usuario
+                     puede completar.
+                ========================================== -->
+<form class="formulario">
+<!--
+                        <fieldset> agrupa los elementos
+                        relacionados del formulario.
+                    -->
+<fieldset>
+<!--
+                            <legend> funciona como título
+                            del formulario.
+                        -->
+<legend>
+                            Envíame un mensaje
+                        </legend>
+<div class="contenedor-campos">
+<!-- =============================
+                                 NOMBRE
+                            ============================== -->
+<div class="campo">
+<label for="nombre">
+                                    Nombre
+                                </label>
+<input class="input-text" id="nombre" name="nombre" placeholder="Escribe tu nombre" type="text"/>
+</div>
+<!-- =============================
+                                 TELÉFONO
+                            ============================== -->
+<div class="campo">
+<label for="telefono">
+                                    Teléfono
+                                </label>
+<input class="input-text" id="telefono" name="telefono" placeholder="Tu número" type="tel"/>
+</div>
+<!-- =============================
+                                 CORREO
+                            ============================== -->
+<div class="campo">
+<label for="email">
+                                    Correo electrónico
+                                </label>
+<input class="input-text" id="email" name="email" placeholder="tucorreo@ejemplo.com" type="email"/>
+</div>
+<!-- =============================
+                                 MENSAJE
+                            ============================== -->
+<div class="campo">
+<label for="mensaje">
+                                    Mensaje
+                                </label>
+<textarea class="input-text" id="mensaje" name="mensaje" placeholder="Cuéntame sobre tu proyecto"></textarea>
+</div>
+<!-- =============================
+                                 BOTÓN ENVIAR
+                            ============================== -->
+<div class="enviar">
+<button class="boton" type="submit">
+                                    Enviar mensaje
+                                </button>
+</div>
+</div>
+</fieldset>
+</form>
+</div>
+</section>
+</main>
+<!-- =====================================================
+         PIE DE PÁGINA
+         -----------------------------------------------------
+         <footer> representa la parte inferior del sitio.
+
+         Aquí se puede colocar:
+         - Derechos de autor.
+         - Redes sociales.
+         - Información de contacto.
+         - Enlaces adicionales.
+    ====================================================== -->
+<footer>
+<div class="contenedor">
+<footer>
+<p>
+            Todos los derechos reservados
+            Axel Diaz Zavala
+        </p>
+<!-- FACEBOOK -->
+<a href="https://www.facebook.com/axeldz.axeldz">
+<svg fill="none" height="60" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+<path d="M7 10v4h3v7h4v-7h3l1-4h-4v-2
+                a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2h-3"></path>
+</svg>
+</a>
+<!-- INSTAGRAM -->
+<a href="https://www.instagram.com/axel_diaz_z/">
+<svg fill="none" height="60" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+<path d="M4 8a4 4 0 0 1 4-4h8
+                a4 4 0 0 1 4 4v8
+                a4 4 0 0 1-4 4h-8
+                a4 4 0 0 1-4-4z"></path>
+<path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0"></path>
+<path d="M16.5 7.5v.01"></path>
+</svg>
+</a>
+<!-- TIKTOK -->
+<a href="https://www.tiktok.com/@axel_diaz_">
+<svg fill="none" height="60" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+<path d="M21 7.917v4.034
+                a9.948 9.948 0 0 1-5-1.951v4.5
+                a6.5 6.5 0 1 1-8-6.326v4.326
+                a2.5 2.5 0 1 0 4 2v-11.5h4.083
+                a6.005 6.005 0 0 0 4.917 4.917"></path>
+</svg>
+</a>
+<!-- SPOTIFY -->
+<a href="https://open.spotify.com/intl-es?flow_ctx=c621ab8a-4e77-4fb7-b5ea-9d1885986080%3A1787356863">
+<svg class="icon icon-tabler icons-tabler-outline icon-tabler-brand-spotify" fill="none" height="60" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+<path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+<path d="M8 11.973c2.5 -1.473 5.5 -.973 7.5 .527"></path>
+<path d="M9 15c1.5 -1 4 -1 5 .5"></path>
+<path d="M7 9c2 -1 6 -2 10 .5"></path>
+</svg>
+</a></footer>
+<!-- =====================================================
+         JAVASCRIPT
+         -----------------------------------------------------
+         Este archivo permite agregar funciones interactivas.
+
+         Por ejemplo:
+         - Carrusel.
+         - Botones.
+         - Menús.
+         - Animaciones.
+         - Validación del formulario.
+
+         Si todavía no tienes este archivo, posteriormente
+         podemos crearlo.
+    ====================================================== -->
+<script src="js/script.js"></script>
+</div></footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const carruseles = document.querySelectorAll(".carrusel");
+
+    carruseles.forEach(function (carrusel) {
+        const slides = carrusel.querySelectorAll(".carrusel-slide");
+        const anterior = carrusel.querySelector(".anterior");
+        const siguiente = carrusel.querySelector(".siguiente");
+        const puntos = carrusel.querySelectorAll(".punto");
+
+        if (slides.length === 0) return;
+
+        let actual = 0;
+
+        function mostrarSlide(indice) {
+            actual = (indice + slides.length) % slides.length;
+
+            slides.forEach(function (slide, i) {
+                slide.classList.toggle("activo", i === actual);
+                slide.setAttribute("aria-hidden", i === actual ? "false" : "true");
+            });
+
+            puntos.forEach(function (punto, i) {
+                punto.classList.toggle("activo", i === actual);
+                punto.setAttribute("aria-current", i === actual ? "true" : "false");
+            });
+        }
+
+        if (anterior) {
+            anterior.addEventListener("click", function () {
+                mostrarSlide(actual - 1);
+            });
+        }
+
+        if (siguiente) {
+            siguiente.addEventListener("click", function () {
+                mostrarSlide(actual + 1);
+            });
+        }
+
+        puntos.forEach(function (punto, i) {
+            punto.addEventListener("click", function () {
+                mostrarSlide(i);
+            });
+        });
+
+        carrusel.addEventListener("keydown", function (evento) {
+            if (evento.key === "ArrowLeft") mostrarSlide(actual - 1);
+            if (evento.key === "ArrowRight") mostrarSlide(actual + 1);
+        });
+
+        carrusel.setAttribute("tabindex", "0");
+        mostrarSlide(0);
+    });
+});
+</script>
+</body>
+</html>
